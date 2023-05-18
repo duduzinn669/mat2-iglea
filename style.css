@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.cabecalho {
+    background-color: #0D40A3;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabecalho-lista-item {
+    display: inline-block;
+    margin: 0 16px;
+    padding: 24px;
+    font-size: xx-large;
+}
+
+.sistema-imagem{
+    width: 25%;
+}
+
+.burro{
+    background-image: linear-gradient(#224AB1,#7E1ACC);
+}
+
+.sistema{
+    
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sistema-p{
+    padding: 110px 0px;
+}
+
+.planeta-imagem{
+    width: 200px;
+}
+
+.planeta-titulo{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.planeta-f{
+    text-align: center;
+}
+
+.planeta-todos{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+
+.meteoro{
+    position: absolute;
+    margin-left: 200px;
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cometa{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.cometa img {
+    width: 5em;
+}
+
+.cometa div {
+    position: absolute;
+    display: block;
+}
+
+.cometa div:nth-child(1) {
+    left: 20%;
+    animation: fall 20s linear infinite;
+}
+
+.cometa div:nth-child(2) {
+    left: 50%;
+    animation: fall 14s infinite linear;
+}
+
+.cometa div:nth-child(3) {
+    left: 70%;
+    animation: fall 12s infinite linear;
+} 
+
+.cometa div:nth-child(4) {
+    left: 5%;
+    animation: fall 15s infinite linear;
+}
+
+.cometa div:nth-child(5) {
+    left: 85%;
+    animation: fall 18s infinite linear;
+}
+
+.cometa div:nth-child(6) {
+    left: 90%;
+    animation: fall 12s infinite linear;
+}
+
+.cometa div:nth-child(7) {
+    left: 15%;
+    animation: fall 14s infinite linear;
+}
+
+.cometa div:nth-child(8) {
+    left: 60%;
+    animation: fall 15s infinite linear;
+}
+
+@keyframes fall {
+    0%{
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20px);
+    }
+    40%{
+        transform: translateX(-20px);
+    }
+    60%{
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        top: 110%;
+        transform: translateX(-20px);
+    }
+}
